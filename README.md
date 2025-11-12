@@ -18,3 +18,8 @@
   No manual registration needed.
 
 - **Fixture:** A reusable setup/cleanup function defined with `@pytest.fixture` that prepares data or environments for tests (e.g. `tmp_path` provides a temporary directory).
+
+## Integration testing
+- Created a test under `/tests/integration/test_order_integration.py` using the built-in `tmp_path` **fixture**.
+- This test verifies interaction between `load_order`, `bulk_total`, and `write_receipt`.
+- It uses temporary files (no manual cleanup) to simulate a real end-to-end workflow.
