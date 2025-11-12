@@ -23,3 +23,8 @@
 - Created a test under `/tests/integration/test_order_integration.py` using the built-in `tmp_path` **fixture**.
 - This test verifies interaction between `load_order`, `bulk_total`, and `write_receipt`.
 - It uses temporary files (no manual cleanup) to simulate a real end-to-end workflow.
+
+## Regression testing
+- Added `tests/regression/test_apply_discount_bug.py` to lock in the fix for the
+  original bug where `apply_discount(price, percent)` treated `percent` as a decimal
+  instead of a percentage. The test would fail on the buggy version and now passes.
